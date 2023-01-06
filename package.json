@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "fs-extra": "^11.1.0",
+    "showdown": "^2.1.0"
+  },
+  "scripts": {
+    "build": "node _scripts/build.js"
+  }
+}
