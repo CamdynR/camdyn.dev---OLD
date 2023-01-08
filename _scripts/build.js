@@ -5,7 +5,7 @@ SHOWDOWN.setOption('completeHTMLDocument', true);
 SHOWDOWN.setOption('metadata', true);
 const SPLIT = process.platform == 'win32' ? '\\' : '/';
 const SRC = __dirname.split(SPLIT).slice(0,-1).join(SPLIT)+`${SPLIT}src`;
-const DIST = __dirname.split(SPLIT).slice(0,-1).join(SPLIT)+`${SPLIT}docs`;
+const DIST = __dirname.split(SPLIT).slice(0,-1).join(SPLIT)+`${SPLIT}dist`;
 
 /**
  *
