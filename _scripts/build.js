@@ -1,4 +1,4 @@
-const FS = require('FS-extra');
+const FS = require('fs-extra');
 const SHOWDOWN = require('showdown');
 SHOWDOWN.setFlavor('github');
 SHOWDOWN.setOption('completeHTMLDocument', true);
