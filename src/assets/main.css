@@ -29,8 +29,8 @@ html, body {
 body {
   background: url(/assets/images/vines.png);
   background-position-x: center;
-  background-position-y: -250px;
-  background-size: 100% auto;
+  background-position-y: -180px;
+  background-size: auto 450px;
   background-repeat: repeat-x;
   background-color: white;
   display: grid;
