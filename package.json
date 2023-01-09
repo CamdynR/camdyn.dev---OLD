@@ -1,9 +1,11 @@
 {
   "devDependencies": {
+    "chokidar-cli": "^3.0.0",
     "fs-extra": "^11.1.0",
     "showdown": "^2.1.0"
   },
   "scripts": {
+    "watch": "npx chokidar \"src/*\" -c \"npm run build\"",
     "build": "node _scripts/build.js"
   }
 }
