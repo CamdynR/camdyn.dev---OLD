@@ -27,17 +27,36 @@ html, body {
 }
 
 body {
-  background: url(/assets/images/vines.png);
+  background-image: url(/assets/images/vines.webp);
   background-position-x: center;
-  background-position-y: -180px;
-  background-size: auto 450px;
+  background-position-y: 0;
   background-repeat: repeat-x;
   background-color: white;
   display: grid;
   font-size: 1.2rem;
-  grid-template-rows: 250px auto;
+  grid-template-rows: 75px auto;
   line-height: 1.4;
-  row-gap: 10px;
+  row-gap: 190px;
+}
+
+body > header {
+  background-color: #515ea3;
+  filter: drop-shadow(0 8px 8px rgba(0,0,0,0.55));
+}
+
+body.dark {
+  background-image: url(/assets/images/vines-night.webp);
+  background-color: #141f2f;
+  color: white;
+}
+
+body.dark :is(a, a:visited) {
+  color: white;
+}
+
+body.dark > header {
+  background-color: #0b2ebf;
+  filter: drop-shadow(0 8px 8px rgba(0,0,0,0.55));
 }
 
 body > div.content {
