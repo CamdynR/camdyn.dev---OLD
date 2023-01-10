@@ -55,7 +55,7 @@ body.dark :is(a, a:visited) {
 }
 
 body.dark > header {
-  background-color: #0b2ebf;
+  /* background-color: #0b2ebf; */
   filter: drop-shadow(0 8px 8px rgba(0,0,0,0.55));
 }
 
