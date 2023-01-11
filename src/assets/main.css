@@ -29,76 +29,117 @@ html, body {
 body {
   background-image: url(/assets/images/vines.webp);
   background-position-x: center;
-  background-position-y: 0;
+  background-position-y: -90px;
   background-repeat: repeat-x;
   background-color: white;
   display: grid;
   font-size: 1.2rem;
-  grid-template-rows: 75px auto;
+  justify-content: center;
   line-height: 1.4;
-  row-gap: 190px;
+  padding-top: 180px;
 }
 
-body > header {
-  /* background-color: #515ea3; */
-  filter: drop-shadow(0 8px 8px rgba(0,0,0,0.55));
-}
-
-body.dark {
-  background-image: url(/assets/images/vines-night.webp);
-  background-color: #141f2f;
-  color: white;
-}
-
-body.dark :is(a, a:visited) {
-  color: white;
-}
-
-body.dark > header {
-  /* background-color: #0b2ebf; */
-  filter: drop-shadow(0 8px 8px rgba(0,0,0,0.55));
-}
-
-body > div.content {
+body > div.wrapper {
+  column-gap: 40px;
   display: grid;
-  column-gap: 20px;
-  grid-template-columns: 64% auto;
+  grid-template-columns: 1fr 5fr 2fr;
+  max-width: 1400px;
+  width: 100%;
 }
 
-body > div.content > div.sidebar {
+body > div.wrapper > header {
+  align-items: flex-end;
+  display: flex;
+  filter: drop-shadow(0 8px 8px rgba(0,0,0,0.55));
+  flex-direction: column;
+}
+
+body > div.wrapper > header ul {
+  column-gap: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+  row-gap: 20px;
+  text-align: right;
+}
+
+body > div.wrapper > header img {
+  filter: drop-shadow(0 2px 8px hsl(216, 40%, 55%));
+  transition: 0.1s ease all;
+}
+
+body  > div.wrapper > div.sidebar {
   border-radius: 15px;
   font-weight: 500;
   height: fit-content;
   max-width: 440px;
-  text-align: justify;
-  top: 10px;
-  padding: 20px;
-  position: sticky;
 }
 
-body > div.content > div.sidebar :is(h1, p) {
-  padding-left: 30px;
-}
-
-body > div.content > :is(div.sidebar, main) {
-  background-color: linear-gradient(0deg, white, white);
+body  > div.wrapper > div.sidebar img {
+  height: auto;
+  width: 100%;
 }
 
 main {
-  justify-self: flex-end;
   width: 100%;
-  max-width: 800px;
 }
 
 main ul {
   display: flex;
   list-style-type: none;
-  row-gap: 60px;
+  row-gap: 70px;
   flex-direction: column;
+  padding: 0;
 }
 
-main ul article>:not(h1) {
+main ul article h2 {
+  font-size: 1,8rem;
+  margin-top: 0;
+}
+
+main ul article>:not(h2) {
   padding-left: 30px;
+}
+
+/*********************************************/
+/*************** HOVER EFFECTS ***************/
+/*********************************************/
+
+@media (hover: hover) {
+  body > div.wrapper > header img:hover {
+    filter: drop-shadow(0 4px 10px hsl(216, 40%, 65%));
+    transform: scale(1.05) rotate(5deg);
+    transition: 0.1s ease all;
+  }
+
+  body > div.wrapper > header img:active {
+    filter: drop-shadow(0 3px 9px hsl(216, 40%, 60%));
+    transform: scale(1.025) rotate(10deg);
+    transition: none;
+  }
+}
+
+/******************************************/
+/*************** DARK THEME ***************/
+/******************************************/
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: url(/assets/images/vines-night.webp);
+    background-color: #141f2f;
+    color: white;
+  }
+  
+  body :is(a, a:visited) {
+    color: white;
+  }
+  
+  body > header {
+    /* background-color: #0b2ebf; */
+    filter: drop-shadow(0 8px 8px rgba(0,0,0,0.55));
+  }
 }
 
 /*************************************/
